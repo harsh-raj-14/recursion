@@ -1,0 +1,21 @@
+class Solution {
+  public:
+  long long power(long long n,long long t)
+  { long long r=1;
+    for(int i=1;i<=t;i++)
+    {
+        r=r*n;
+    }
+    return r;
+  }
+    int reverseExponentiation(int n) {
+        // code here
+        long long r=0,t=n;
+        while(t)
+        {
+            r=r*10+t%10;
+            t=t/10;
+        }
+       return power(n,r);
+    }
+};
