@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    // Function to count the number of digits in n that evenly divide n
+    int evenlyDivides(int n) {
+        // code here
+        int t=n,c=0,r;
+        while(t)
+        {
+            r=t%10;
+            if(n%t==0) c++;
+            t=t/10;
+        }
+        return c;
+    }
+};
